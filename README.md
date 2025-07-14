@@ -140,9 +140,9 @@ Let the IAM Role handle credentials like AWS intended.”
 Charles Bucher
 Cloud Support Engineer · AWS · Terraform · Real-World Problem Solver
 
-GitHub: @Tommy813-lab
+GitHub;  @Tommy813-lab
 
-LinkedIn: Charles Bucher
+LinkedIn:  Charles Bucher
 
-Portfolio: Charles' Portfolio
+Portfolio:  Charles-Portfolio/
 

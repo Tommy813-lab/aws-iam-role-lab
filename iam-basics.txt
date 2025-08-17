@@ -1,0 +1,49 @@
+# IAM Basics Lab
+
+## Scenario
+
+AWS Identity and Access Management (IAM) allows you to **securely control access** to your AWS resources.  
+This lab introduces the **fundamentals of IAM**: users, groups, roles, policies, and best practices.
+
+---
+
+## Step 1: Users and Groups
+
+1. **Users** represent individual people or services needing access.  
+2. **Groups** help organize users and apply policies collectively.  
+
+**Example:**  
+
+- Create a group called `Developers`.  
+- Attach `AmazonS3ReadOnlyAccess` policy to the group.  
+- Add your IAM users to the `Developers` group.  
+
+> Users now inherit permissions from the group, making management easier.
+
+---
+
+## Step 2: Policies
+
+- Policies define **what actions are allowed or denied** on AWS resources.  
+- **Types of policies:**
+  - **AWS managed:** Predefined by AWS, e.g., `AdministratorAccess`, `S3ReadOnlyAccess`.
+  - **Customer managed:** Custom policies you create for your specific needs.  
+- Policies are written in **JSON**.
+
+**Example:** A custom policy allowing EC2 to access a specific S3 bucket:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EC2S3Access",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::tommy813-demo-bucket/*"
+    }
+  ]
+}

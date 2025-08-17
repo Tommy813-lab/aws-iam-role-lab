@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "TommyEC2S3Access",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::charles-demo-bucket-1234",
+        "arn:aws:s3:::charles-demo-bucket-1234/*"
+      ]
+    }
+  ]
+}

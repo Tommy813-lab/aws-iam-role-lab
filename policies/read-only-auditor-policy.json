@@ -1,25 +1,24 @@
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "ReadOnlyAuditor",
-            "Effect": "Allow",
-            "Action": [
-                "s3:ListBucket",
-                "s3:GetObject",
-                "ec2:Describe*",
-                "iam:Get*",
-                "iam:List*",
-                "cloudwatch:Describe*",
-                "cloudwatch:Get*",
-                "dynamodb:Scan",
-                "dynamodb:Query",
-                "dynamodb:Describe*",
-                "lambda:Get*",
-                "lambda:List*"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "TommyLabReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:DescribeSecurityGroups",
+        "s3:ListBucket",
+        "s3:GetObject",
+        "dynamodb:DescribeTable",
+        "dynamodb:Scan",
+        "cloudwatch:DescribeAlarms",
+        "cloudwatch:GetMetricData",
+        "lambda:ListFunctions",
+        "lambda:GetFunctionConfiguration",
+        "iam:GetRole",
+        "iam:ListRoles"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
- 
